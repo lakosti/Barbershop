@@ -1,6 +1,30 @@
 body {
-    font-family: "Open Sans", Verdana, sans-serif;
+  font-family: 'Open Sans', Verdana, sans-serif;
 }
 .list {
-    list-style: none;
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.header {
+  background-color: black;
+}
+.header-link,
+.header-tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.header-btn {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
