@@ -33,6 +33,30 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* --------------------------HEADER-------------------------- */
 
 .header {
@@ -85,9 +109,6 @@ body {
   color: var(--main-title-color);
 }
 .hero-after-title {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
   color: #9da4bd;
 }
 /* ----------------------------------ABOUT---------------------------- */
@@ -96,16 +117,9 @@ body {
   color: var(--main-text-color);
 }
 .about-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
   color: var(--second-title-color);
 }
 .about-after-title {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
   color: var(--second-text-color);
 }
 .about-text {
@@ -124,10 +138,6 @@ body {
   color: rgba(157, 164, 189, 0.6);
 }
 .prices-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
   color: var(--main-title-color);
 }
 .prices-item-text {
@@ -152,23 +162,16 @@ body {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
+  text-align: center;
   color: var(--main-text-color);
 }
 .benefits-pre-title {
   color: var(--main-text-color);
 }
 .benefits-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
   color: var(--second-title-color);
 }
 .benefits-after-title {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
   color: var(--second-text-color);
 }
 
@@ -178,26 +181,69 @@ body {
   color: var(--main-text-color);
 }
 .masters-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
-
   color: var(--main-text-color);
 }
 .masters-item-title {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
+  text-align: center;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
 }
 .masters-item-text {
   font-size: 14px;
   line-height: 1.36;
+  text-align: center;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
 
 /* --------------------------------------GALLERY---------------------------- */
+
+.gallery-pre-title {
+  color: var(--main-text-color);
+}
+
+/* ------------------------------------ONLINE--------------------------------- */
+
+.online-title {
+  color: var(--main-title-color);
+}
+
+/* -----------------------------------CONTACTS---------------------------------- */
+.contacts-title {
+  color: var(--main-title-color);
+}
+.contacts-address {
+  font-style: normal;
+}
+.contacts-link,
+.contacts-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-pre-title {
+  color: var(--main-title-color);
+}
+
+/* -------------------------------FOOTER-------------------------- */
+
+.footer-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--main-text-color);
+}
