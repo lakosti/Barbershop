@@ -1,5 +1,16 @@
+:root {
+  --main-title-color: #ffffff;
+  --second-title-color: #303030;
+  --header-color: #ffffff;
+  --main-btn-color: #ffffff;
+  --second-btn-color: #303030;
+  --main-text-color: #303030;
+  --second-text-color: #555555;
+  --accent-color: #ff6c00;
+  --main-font: 'Open Sans', Verdana, sans-serif;
+}
 body {
-  font-family: 'Open Sans', Verdana, sans-serif;
+  font-family: var(--main-font);
 }
 .list {
   list-style: none;
@@ -7,6 +18,9 @@ body {
 .link {
   text-decoration: none;
 }
+
+/* --------------------------HEADER-------------------------- */
+
 .header {
   background-color: black;
 }
@@ -16,15 +30,60 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  color: #ffffff;
+  color: var(--header-color);
+}
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
 }
 
 .header-btn {
-  font-family: 'Open Sans';
+  font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--main-btn-color);
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+}
+
+/* --------------------------HERO-------------------------- */
+.hero {
+  background-color: black;
+}
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--main-text-color);
+}
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-color);
+}
+.hero-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+.hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--main-title-color);
+}
+.hero-after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
