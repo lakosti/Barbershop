@@ -22,6 +22,11 @@ body {
   outline: 1px solid red;
 }
 .btn {
+  min-width: 160px;
+  height: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--accent-color);
+  background-color: transparent;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -68,6 +73,36 @@ body {
   padding-bottom: 32px;
 }
 /* padding bottom needs if we use header in another section, and header not be stick to the content */
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 70px;
+}
+.header-list {
+  display: flex;
+}
+
+/* .header-item + .header-item {
+  margin-left: 40px;
+} */
+
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* .header-connect {
+  margin-left: auto;
+} */
+
+.header-tel {
+  margin-left: auto;
+}
 
 .header-link,
 .header-tel {
@@ -83,17 +118,23 @@ body {
 }
 
 .header-btn {
+  margin-left: 60px;
   color: var(--main-btn-color);
-  background-color: transparent;
-  border: 1px solid var(--accent-color);
-  border-radius: 25px;
 }
 
 /* --------------------------HERO-------------------------- */
+.hero .container {
+  display: flex;
+}
 
+/* -------------------Bикористання flex-grow ------------------ */
+.hero-list {
+  width: 90px;
+}
 .hero-content {
   padding: 270px 100px 200px 100px;
   background-color: black;
+  flex-grow: 1;
 }
 .hero-link {
   font-weight: 600;
@@ -127,6 +168,16 @@ body {
 .about {
   padding-top: 140px;
   padding-bottom: 90px;
+}
+.about-list {
+  display: flex;
+  margin-right: 64px;
+}
+.about-item + .about-item {
+  margin-left: 30px;
+}
+.about .container {
+  display: flex;
 }
 .about-pre-title {
   color: var(--main-text-color);
@@ -165,30 +216,48 @@ body {
   color: var(--main-title-color);
   margin-bottom: 44px;
 }
+.prices-wrap {
+  display: flex;
+}
 .prices-item-text {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+
 .prices-list {
   border: 1px solid white;
   padding: 30px 40px;
+  flex-grow: 1;
+  /* width: 50%; */
 }
 .prices-item {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: var(--typical-margin);
+}
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 .prices-btn {
   display: block;
   margin: 0 auto;
   margin-top: 50px;
   color: var(--main-btn-color);
+  background-color: var(--accent-color);
 }
 
 /* --------------------------------------BENEFITS------------------------------ */
 .benefits {
   padding-top: 143px;
   padding-bottom: 137px;
+}
+.benefits .container {
+  display: flex;
+}
+.benefits-wrap {
+  margin-left: 130px;
 }
 .benefits-item {
   padding: 20px 20px;
@@ -232,12 +301,32 @@ body {
   padding-bottom: 130;
 }
 
+.masters-list {
+  display: flex;
+  margin-left: -30px;
+  /* margin: -15px; */
+}
+.masters-item {
+  /* flex-basis: calc((100% - 90px) / 3); */
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  /* margin: 15px; */
+}
+/* .masters-item {
+  width: 370px;
+}
+.masters-item:not(:last-child) {
+  margin-right: 30px;
+} */
+/* .masters-item + .masters-item {
+  margin-left: 30px;
+} */
 .masters-pre-title {
   margin-bottom: var(--typical-margin);
   color: var(--main-text-color);
 }
 .masters-title {
-  margin-bottom: 44;
+  margin-bottom: 44px;
   color: var(--main-text-color);
 }
 .masters-item-title {
@@ -263,6 +352,19 @@ body {
   padding-top: 130px;
   padding-bottom: 130px;
 }
+.gallery-list {
+  display: flex;
+  gap: 30px;
+  /* margin: -15px; */
+}
+.gallery-item {
+  width: calc((100 - 90px) / 4);
+  /* flex-basis: calc(100% / 4 - 30px);
+  margin: 15px; */
+}
+/* .gallery-item + .gallery-item {
+  margin-left: 30px;
+} */
 .gallery-pre-title {
   margin-bottom: 44px;
   color: var(--main-text-color);
@@ -273,11 +375,16 @@ body {
   background-color: black;
 }
 .online {
+  /* width: 657px; */
   padding-top: 130px;
   padding-bottom: 130px;
 }
 .online-title {
   color: var(--main-title-color);
+}
+.online-btn {
+  margin-top: 44px;
+  color: var(--main-btn-color);
 }
 
 /* -----------------------------------CONTACTS---------------------------------- */
@@ -285,6 +392,9 @@ body {
   padding-top: 130px;
   padding-bottom: 130px;
 }
+/* .contact-wrap .container {
+  display: flex;
+} */
 .contacts-title {
   margin-bottom: 40px;
   color: var(--main-title-color);
@@ -313,6 +423,17 @@ body {
 /* -------------------------------FOOTER-------------------------- */
 .footer {
   padding: 56px 55px;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+.footer-list {
+  display: flex;
+  margin-left: auto;
+}
+.footer-item + .footer-item {
+  margin-left: 40px;
 }
 .footer-text {
   font-weight: 600;
