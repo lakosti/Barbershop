@@ -19,7 +19,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 .btn {
   min-width: 160px;
@@ -127,12 +126,17 @@ body {
   display: flex;
 }
 
-/* -------------------Bикористання flex-grow ------------------ */
+/* ---------Bикористання flex-grow --------- */
 .hero-list {
   width: 90px;
 }
 .hero-content {
   padding: 270px 100px 200px 100px;
+  background-image: linear-gradient(rgb(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url(../img/Slider-3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: black;
   flex-grow: 1;
 }
@@ -150,6 +154,17 @@ body {
 .hero-pre-title {
   margin-bottom: var(--typical-margin);
   color: rgba(157, 164, 189, 0.6);
+}
+.pre-title {
+  display: flex;
+  align-items: center;
+}
+.pre-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  background: currentColor;
+  margin-right: 21px;
 }
 .hero-title {
   margin-bottom: var(--typical-margin);
@@ -204,9 +219,18 @@ body {
 
 /* -------------------------------PRICES-------------------------- */
 .prices {
+  /* якщо сама картинка має прозрачність, і щоб вона її було видно на білому фоні */
+  background-color: #111319;
+  background-image: url(../img/prices-bg.png);
+  /* background-image: url(../img/prices-bg.png), linear-gradient(#111319, #111319); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* щоб обрізати картинку по її оригінальному розмірі */
+  max-width: 1280px;
+  margin: 0 auto;
   padding-top: 130px;
   padding-bottom: 130px;
-  background-color: black;
 }
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
@@ -225,20 +249,48 @@ body {
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
-
+.prices-list:first-child {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.prices-list:last-child {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
 .prices-list {
-  border: 1px solid white;
   padding: 30px 40px;
   flex-grow: 1;
   /* width: 50%; */
 }
 .prices-item {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   margin-bottom: var(--typical-margin);
 }
+/* .prices-item::after {
+  content: '';
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: rgba(157, 164, 189, 0.12);
+} */
+
+/* ---через бордер--- */
+
+.prices-item::after {
+  content: '';
+  flex-grow: 1;
+  margin-left: 6px;
+  margin-right: 6px;
+  /* width: 100%; */
+  border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+}
 .prices-item:last-child {
   margin-bottom: 0;
+}
+/* чим більший ордер у елемента тим він правіше. по замовчуванню стоїть нуль */
+.prices-item-text:last-child {
+  order: 1;
 }
 .prices-btn {
   display: block;
@@ -297,6 +349,7 @@ body {
 
 /* --------------------------------MASTERS---------------------------- */
 .masters {
+  background-color: #f7f7f7;
   padding-top: 130px;
   padding-bottom: 130;
 }
@@ -340,13 +393,57 @@ body {
   color: var(--second-title-color);
 }
 .masters-item-text {
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
+.masters-soc-list {
+  display: flex;
+  justify-content: center;
+}
+/* розміри задають батьківським елементам, а діти наслідують */
+.masters-soc-item {
+  margin-left: 10px;
+  width: 44px;
+  height: 44px;
+}
+.masters-soc-item:first-child {
+  margin-left: 0;
+}
+.masters-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  /* color: var(--main-text-color); */
+  fill: var(--main-text-color);
+}
+/* можна колір змінити через силку. задати їй філ и потім цей філ проховерити/ або задати колір через карентколор. тобто в такому випадку іконка просто перетягне колір від посилання */
+/* .masters-soc-icon {
+  fill: currentColor;
+} */
+.masters-soc-icon:hover,
+.masters-soc-icon:focus {
+  /* color: var(--accent-color); */
+  fill: var(--accent-color);
+}
+/* .masters-soc-link:hover,
+.masters-soc-link:focus {
+  background-color: teal;
+} */
 
+/* _______через батька змінюємо дитину (при ховері на батька, дитина має колір білий________ */
+
+/* .masters-soc-link:hover .masters-soc-icon,
+.masters-soc-link:focus .masters-soc-icon {
+  fill: #ffffff;
+} */
 /* --------------------------------------GALLERY---------------------------- */
 .gallery {
   padding-top: 130px;
@@ -372,10 +469,20 @@ body {
 
 /* ------------------------------------ONLINE--------------------------------- */
 .contact-wrap {
-  background-color: black;
+  background-color: #191c26;
+  background-image: url(../img/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px);
+  /* фон буде поторювати розмір секції з функцією калк */
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.contact-wrap .container {
+  display: flex;
 }
 .online {
-  /* width: 657px; */
+  width: calc(50% + 15px);
   padding-top: 130px;
   padding-bottom: 130px;
 }
@@ -389,12 +496,11 @@ body {
 
 /* -----------------------------------CONTACTS---------------------------------- */
 .contacts {
+  width: calc(50% - 15px);
+  padding-left: 100px;
   padding-top: 130px;
   padding-bottom: 130px;
 }
-/* .contact-wrap .container {
-  display: flex;
-} */
 .contacts-title {
   margin-bottom: 40px;
   color: var(--main-title-color);
