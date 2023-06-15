@@ -43,7 +43,7 @@
         </nav>
         <!-- <div class="header-connect"> -->
         <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-        <button type="button" class="header-btn btn">онлайн-запись</button>
+        <button type="button" class="header-btn btn" data-modal-open>онлайн-запись</button>
       </div>
       <!-- </div> -->
     </header>
@@ -379,6 +379,16 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="close-btn-icon" width="10" height="10">
+            <use href="./img/icons.svg#icon-close-black-18dp-2-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
